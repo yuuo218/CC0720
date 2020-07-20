@@ -1,0 +1,52 @@
+<ons-page id="profile.html">
+  <ons-toolbar>
+    <div class="center">@ALPHATEC2020</div>
+    <ons-button class="right" modifier="quiet" onclick="document.getElementById('navi').pushPage('setting.html')" style="margin-right : 20px;">⚙</ons-button>
+  </ons-toolbar>
+  <img src="./XjBy755__400x400.jpg" id="iconimage">
+  <p class="name">ALPHA TEC</p>
+  <p class="inline">
+    <ons-button modifier="quiet" onclick="document.getElementById('navi').pushPage('profileedit.html')" style="margin-left : -20px;">⚙</ons-button>
+  </p>
+  <div>
+    <p style="margin : -5px 30px 10px 30px">
+      YouTube でキャンプ飯やってます。<br>
+      只今チャンネル登録者数 31万人
+    </p>
+
+    <a class="url" href="youtube.com/c/ALPHATEC">🔗 youtube.com/c/ALPHATEC</a>
+  </div>
+
+      <div class="folpos" style="margin-left : 25px">
+        <ons-button modifier="quiet" id="postbtn">投稿</ons-button>
+        <p class="profnumber" style="margin-left : 10px">145</p>
+      </div>
+        <div class="folpos" style="margin-right : -8px">
+        <ons-button modifier="quiet" onclick="document.getElementById('navi').pushPage('follow.html')">フォロー</ons-button>
+      <p class="profnumber" style="margin-left : 30px">857</p>
+      </div>
+      <div class="folpos" style="margin-left : -8px">
+        <ons-button modifier="quiet" onclick="document.getElementById('navi').pushPage('follower.html')">フォロワー</ons-button>
+        <p class="profnumber" style="margin-left : 40px">765</p>
+      </div>
+
+
+<div class="tab_wrap">
+	<input id="tab1" type="radio" name="tab_btn" checked>
+	<input id="tab2" type="radio" name="tab_btn">
+
+	<div class="tab_area">
+		<label class="tab1_label" for="tab1">投稿</label>
+		<label class="tab2_label" for="tab2">いいね</label>
+	</div>
+	<div class="panel_area">
+		<div id="panel1" class="tab_panel">
+			<p>自分の投稿を表示</p>
+		</div>
+		<div id="panel2" class="tab_panel">
+			<p>いいねした投稿を表示</p>
+		</div>
+	</div>
+ </div>
+
+</ons-page>

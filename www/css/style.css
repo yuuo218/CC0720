@@ -1,0 +1,94 @@
+/* ----------   profileedit   ---------- */
+.filelabel {
+   background-color: orange;  /* 背景色 */
+   color: white;              /* 文字色 */
+   border: 2px solid orange;  /* 枠線 */
+   border-radius: 3em;        /* 角丸 */
+   padding: 12px 9px;         /* 内側の余白 */
+   display: inline-block;     /* インラインブロック化 */
+}
+.filelabel img {
+   vertical-align: bottom;    /* 画像の垂直方向の配置 */
+}
+.filelabel:hover {
+   opacity: 0.5;              /* 半透明 */
+   border: 2px solid red;     /* 枠線(赤色) */
+   cursor: pointer;           /* マウス形状(ポインタ) */
+}
+#myImage {
+   display: none;  /* 本来のファイル選択フォームは非表示に */
+}
+.accfont{
+  margin-top: 10px;
+  color:#AAAAAA;
+}
+.profedit{
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+/* ----------   profile   ---------- */
+
+#iconimage{
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  margin: 20px 20px 20px 20px;
+  vertical-align: middle;
+}
+
+.name{
+  display:inline-block;
+  font-size: 17px;
+  vertical-align: middle;
+  margin: 25px 0px 25px 0px;
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.url{
+  font-size: 15px;
+  vertical-align: middle;
+  margin : 0px 30px 0px 30px;
+  width: 10%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.inline{
+  display:inline-block;
+  margin-left: 20px;
+}
+
+.folpos{
+  display:inline-block;
+  padding: 10px 15px 0px 15px;
+}
+
+.profnumber{
+  margin: 0px 0px 15px 0px;
+}
+
+#postbtn{
+  color : #999;
+}
+
+  /*    tab    */
+
+.tab_wrap{width:auto; margin:10px; vertical-align: middle;}
+input[type="radio"]{display:none;}
+.tab_area{font-size:0; margin:auto; margin-left: 13px;}
+.tab_area label{width:150px; margin:0 5px; display:inline-block; padding:12px 0; color:#999; background:#ddd; text-align:center; font-size:13px; cursor:pointer; transition:ease 0.2s opacity;}
+.tab_area label:hover{opacity:0.5;}
+.panel_area{background:#fff;}
+.tab_panel{width:100%; padding:80px 0; display:none;}
+.tab_panel p{font-size:14px; letter-spacing:1px; text-align:center;}
+
+#tab1:checked ~ .tab_area .tab1_label{background:#fff; color:#000;}
+#tab1:checked ~ .panel_area #panel1{display:block;}
+#tab2:checked ~ .tab_area .tab2_label{background:#fff; color:#000;}
+#tab2:checked ~ .panel_area #panel2{display:block;}

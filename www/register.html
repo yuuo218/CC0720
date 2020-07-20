@@ -1,0 +1,100 @@
+<!--新規登録画面-->
+<ons-page>
+  <ons-toolbar>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">Camper's Connect</div>
+  </ons-toolbar>
+  <div class="pagebody">
+    <div style="text-align: center; margin-top: 100px;">
+      <form>
+        <p>
+          <!--エラーメッセージ-->
+        </p>
+        <ul class="list">
+          <li class="list-item">
+            <div class="list-item__center">
+              <ons-input type="email" class="text-input" id ='mail' placeholder="メールアドレス">
+            </div>
+          </li>
+
+          <li class="list-item">
+            <div class="list-item__center">
+              <ons-input type="text" class="text-input" id ='id' placeholder="ID">
+            </div>
+          </li>
+
+          <li class="list-item">
+            <div class="list-item__center">
+              <ons-input type="password" name="password" class="text-input" id ='pass' placeholder="パスワード">
+            </div>
+          </li>
+
+          <li class="list-item">
+            <div class="list-item__center">
+              <ons-input type="password" name="password2" class="text-input" id ='pass2' placeholder="確認用パスワード">
+            </div>
+          </li>
+        </ul>
+
+          <ons-button class="button--large--quiet" style="width: 95%; margin: 0 auto;"
+          onclick="document.getElementById('navi').pushPage('rules.html')">利用規約</ons-button>
+
+        <div class="form-item">
+          <input type="checkbox" name="agree" id="agree-check1" />個人情報の取り扱いに同意します。
+        </div>
+
+        <div class="form-item">
+          <input type="checkbox" name="agree" id="agree-check2" />利用規約に同意します。
+        </div>
+
+        <div class="btn">
+          <ons-button class="button--large--cta" id="register_btn" style="width: 95%; margin: 0 auto;"
+          onclick='clickEvent()'>新規登録</ons-button>
+
+          <script>
+        
+            //document.addEventListener('init', function() {
+             //register_btn.disabled = false;
+            //}, false);
+
+            function clickEvent(){
+              var mail = document.getElementById('mail');
+              var id = document.getElementById('id');
+              var pass = document.getElementById('pass');
+              var pass2 = document.getElementById('pass2');
+
+              
+              localStorage.setItem('mail', mail.value);
+              localStorage.setItem('id', id.value);
+              localStorage.setItem('pass', pass.value);
+              localStorage.setItem('pass2', pass2.value);
+
+              if(mail.value == 0){
+                alert("メールアドレスを入力してください");
+              }
+
+              else if(id.value == 0){
+                alert("IDを入力してください");
+              }
+
+              else if(pass.value == 0){
+                alert("パスワードを入力してください");
+              }
+
+              else if(pass2.value == 0){
+                alert("確認用パスワードを入力してください");
+              }
+
+              else if(pass.value != pass2.value){
+                alert("パスワードが一致しません");
+              }
+              else{
+                document.getElementById('navi').pushPage('registerCheck.html');
+              }
+            }
+          </script>
+        </div>
+      </form>
+    </div>
+  </div>
+</ons-page>

@@ -1,0 +1,40 @@
+<!-- 登録内容確認画面 -->
+<ons-page id="registerCheck.html">
+
+  <ons-toolbar>
+    <div class="center">Camper's Connect</div>
+  </ons-toolbar>
+
+   <p>
+    メールアドレス:<span id ='mailDOM'></span><br>
+    ID:<span id ='idDOM'></span>
+
+    <h3>上記の内容でよろしいですか？</h3>
+
+    <ons-button class="back-btn"
+      onclick="document.getElementById('navi').popPage()">
+      訂正
+    </ons-button>
+    <ons-button class="btn"
+      onclick="document.getElementById('navi').pushPage('tutorial.html')">
+      登録
+    </ons-button>
+    
+   </p>
+
+  <script>
+  document.addEventListener('init', function() {
+    var mailDOM = document.getElementById('mailDOM');
+
+    var mail =localStorage.getItem('mail');
+    var id =localStorage.getItem('id');
+    var pass =localStorage.getItem('pass');
+
+    mailDOM.innerText = mail; 
+    idDOM.innerText = id; 
+  });
+  </script>
+
+
+
+</ons-page>

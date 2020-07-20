@@ -1,0 +1,27 @@
+<ons-page id="search.html">
+
+  <ons-toolbar>
+    <div class="center">検索</div>
+  </ons-toolbar>
+
+  <p style="text-align: center; margin-top: 10px;">
+    <ons-search-input
+      placeholder="Search"
+      onchange="ons.notification.alert('Searched for: ' + this.value)"
+    ></ons-search-input>
+  </p>
+  </div>
+ <div>
+      <ons-list>
+        <ons-list-header></ons-list-header>
+          <ons-list-item modifier="chevron" tappable>北海道・東北地方</ons-list-item>
+          <ons-list-item modifier="chevron" tappable>関東地方</ons-list-item>
+          <ons-list-item modifier="chevron" tappable>中部地方</ons-list-item>
+          <ons-list-item modifier="chevron" tappable>近畿地方</ons-list-item>
+          <ons-list-item modifier="chevron" tappable>中国地方</ons-list-item>
+          <ons-list-item modifier="chevron" tappable>四国地方</ons-list-item>
+          <ons-list-item modifier="chevron" tappable>九州沖縄</ons-list-item>
+      </ons-list>
+</div>
+  </ons-template>
+</ons-page>

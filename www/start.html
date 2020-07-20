@@ -1,0 +1,36 @@
+<!--起動画面-->
+<ons-page>
+  <div class="pagebody">
+    <h1>Camper's Connect</h1>
+  </div>
+  
+  <div class="pagebody">
+    <ons-button class="register"
+      onclick="document.getElementById('navi').pushPage('register.html')">
+      新規アカウントを登録
+    </ons-button>
+
+    <br>
+
+    <ons-button class="rogin"
+      onclick="document.getElementById('navi').pushPage('login.html')">
+      ログイン
+    </ons-button>
+
+    <br>
+
+    <ons-button class="guest" 
+      onclick="clickEvent()">
+      ゲストログイン
+      <script>
+        function clickEvent(){
+          answer = confirm('ゲストでログインします。よろしいですか？');
+          if (answer == true){
+            document.getElementById('navi').pushPage('tutorial.html');
+          }
+        }
+      </script>
+    </ons-button>
+
+  </div>
+</ons-page>
