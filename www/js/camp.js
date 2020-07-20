@@ -1,8 +1,3 @@
-var applicationKey = 'b668c00a6d06197fb3fed63f78169471550c16515fe0f550edec345baae03c8e';
-var clientKey = 'afdd2791cfe1f663cf4ac497031574266c0636b002b472047afa9e27a33e462b';
-
-// SDK初期化
-var ncmb = new NCMB(b668c00a6d06197fb3fed63f78169471550c16515fe0f550edec345baae03c8e, afdd2791cfe1f663cf4ac497031574266c0636b002b472047afa9e27a33e462b);
 
     ons.ready(function() {
       console.log("Onsen UI is ready!");
